@@ -1,3 +1,11 @@
+/*  Dummy High Order Component
+    Renders a dummy wrapper to simulate screens
+    props:
+      - iconName: Name of the icon in the screen
+      - text: The screen text
+      - children: Aditional JSX Elements
+ */
+
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';

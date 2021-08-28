@@ -1,3 +1,8 @@
+/* Auth Navigator
+   Manage the configuration of the screens in the
+   authentication workflow
+*/
+
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { LoginScreen, RegisterScreen } from '../../screens';

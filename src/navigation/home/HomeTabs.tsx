@@ -1,3 +1,8 @@
+/*  Home Tabs Navigator
+   Manage the configuration of the tabs in the
+   home navigator
+*/
+
 import React from 'react';
 import { Platform } from 'react-native';
 import {

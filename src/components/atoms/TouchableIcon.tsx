@@ -1,3 +1,15 @@
+/* Touchable Icon
+   Renders a touchable icon
+  props:
+    - icon: The name of the icon
+    - text: The text to be shown with the icon
+    - size: The size of the icon
+    - color: Color of the icon
+    - textColor: Color of the text
+    - style: Custom styles for the touchable
+    - onPress: Function that triggers when the icon is pressed
+*/
+
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, ViewStyle } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';

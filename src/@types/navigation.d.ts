@@ -1,3 +1,6 @@
+/* Navigation Types Module
+   Manage all the navigation types of the application
+*/
 import { StackScreenProps } from '@react-navigation/stack';
 
 declare global {

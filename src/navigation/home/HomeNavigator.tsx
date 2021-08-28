@@ -1,3 +1,8 @@
+/* Home Navigator
+  Manage the configuration of the home
+  navigation workflow
+*/
+
 import React, { useContext } from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import HomeTabs from './HomeTabs';

@@ -1,3 +1,6 @@
+/* State Types Module
+   Manage all the state related typing of the app
+*/
 export {};
 
 declare global {

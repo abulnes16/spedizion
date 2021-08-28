@@ -1,3 +1,7 @@
+/* Main Navigator
+   Manage the mounting of the navigators in the app
+*/
+
 import React, { useContext } from 'react';
 import { AuthContext } from '../state/auth';
 import AuthNavigator from './auth/AuthNavigator';

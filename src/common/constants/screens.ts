@@ -1,3 +1,7 @@
+/* Screen constants module
+   Contains the name of the screens in the navigation tree
+ */
+
 export const APP_SCREENS = {
   REGISTER_SCREEN: 'RegisterScreen',
   LOGIN_SCREEN: 'LoginScreen',

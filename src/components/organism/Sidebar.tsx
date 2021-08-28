@@ -1,3 +1,10 @@
+/* Sidebar
+  Renders a sidebar in the drawer navigator
+  props:
+    - logout: Function that log out a user
+    - user: The user name
+*/
+
 import React from 'react';
 import {
   DrawerContentComponentProps,
