@@ -3,46 +3,52 @@ import {
   DrawerContentComponentProps,
   DrawerContentScrollView,
 } from '@react-navigation/drawer';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import { View, Text, StyleSheet } from 'react-native';
 import { ICON_COLORS } from '../../common/constants';
+import TouchableIcon from '../atoms/TouchableIcon';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 interface Props extends DrawerContentComponentProps {
   logout: () => void;
+  user: string;
 }
 
-const Sidebar = ({ navigation, logout }: Props) => {
+const Sidebar = ({ navigation, logout, user }: Props) => {
   return (
     <DrawerContentScrollView>
       <View style={styles.menuContainer}>
-        <Text>Welcome user :D </Text>
-        <TouchableOpacity
+        <Icon
+          style={styles.avatar}
+          name="person-circle"
+          color={ICON_COLORS.primary}
+          size={80}
+        />
+        <Text style={styles.greetings}>Welcome {user}</Text>
+        <TouchableIcon
+          icon="home"
+          text="Home"
           onPress={() => navigation.navigate('RestaurantTabs')}
-          style={styles.btn}>
-          <Icon name="home" size={20} />
-          <Text>Home</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
+        />
+        <TouchableIcon
+          icon="person"
+          text="Profile"
           onPress={() => navigation.navigate('ProfileScreen')}
-          style={styles.btn}>
-          <Icon name="person" size={20} />
-          <Text>Profile</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
+        />
+
+        <TouchableIcon
+          icon="cog"
+          text="Settings"
           onPress={() => navigation.navigate('SettingsScreen')}
-          style={styles.btn}>
-          <Icon name="cog" size={20} />
-          <Text>Settings</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
+        />
+
+        <TouchableIcon
+          icon="log-out"
+          text="Logout"
+          color="white"
+          textColor="white"
           onPress={logout}
-          style={[
-            styles.btn,
-            { ...styles.logoutBtn, backgroundColor: ICON_COLORS.primary },
-          ]}>
-          <Icon name="log-out" size={20} />
-          <Text>Logout</Text>
-        </TouchableOpacity>
+          style={{ ...styles.logoutBtn, backgroundColor: ICON_COLORS.primary }}
+        />
       </View>
     </DrawerContentScrollView>
   );
@@ -50,19 +56,24 @@ const Sidebar = ({ navigation, logout }: Props) => {
 
 const styles = StyleSheet.create({
   menuContainer: {
-    paddingHorizontal: 5,
+    paddingVertical: 30,
+    paddingHorizontal: 25,
+    alignItems: 'flex-start',
   },
-  btn: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-
   logoutBtn: {
     borderRadius: 20,
     paddingHorizontal: 15,
     paddingVertical: 8,
-    marginVertical: 10,
+    marginVertical: 20,
+    alignSelf: 'center',
+  },
+  greetings: {
+    fontSize: 28,
+    textAlign: 'center',
+    marginBottom: 10,
+  },
+  avatar: {
+    alignSelf: 'center',
   },
 });
 

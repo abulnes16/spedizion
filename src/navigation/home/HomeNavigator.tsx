@@ -8,11 +8,13 @@ import { AuthContext } from '../../state/auth';
 const Drawer = createDrawerNavigator<HomewDrawerParams>();
 
 const HomeNavigator = () => {
-  const { logout } = useContext(AuthContext);
+  const { logout, user } = useContext(AuthContext);
 
   return (
     <Drawer.Navigator
-      drawerContent={props => <Sidebar {...props} logout={logout} />}>
+      drawerContent={props => (
+        <Sidebar {...props} logout={logout} user={user} />
+      )}>
       <Drawer.Screen name="RestaurantTabs" component={HomeTabs} />
       <Drawer.Screen name="ProfileScreen" component={ProfileScreen} />
       <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
