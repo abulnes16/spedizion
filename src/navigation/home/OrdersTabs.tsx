@@ -7,8 +7,8 @@ const Tab = createMaterialTopTabNavigator();
 const OrdersTabs = () => {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Home" component={OrdersScreen} />
-      <Tab.Screen name="Settings" component={HistoricScreen} />
+      <Tab.Screen name="Active Orders" component={OrdersScreen} />
+      <Tab.Screen name="Historic Orders" component={HistoricScreen} />
     </Tab.Navigator>
   );
 };

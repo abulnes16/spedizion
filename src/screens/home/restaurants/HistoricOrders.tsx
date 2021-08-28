@@ -4,8 +4,8 @@ import { DummyHOC } from '../../../components';
 
 const HistoricOrders = () => {
   return (
-    <DummyHOC iconName="basket" text="HistoricOrders">
-      <Text>Here goes the HistoricOrders</Text>
+    <DummyHOC iconName="basket" text="Historic Orders">
+      <Text>Here goes the Historic Orders</Text>
     </DummyHOC>
   );
 };
