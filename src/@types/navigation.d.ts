@@ -5,6 +5,17 @@ declare global {
     RegisterScreen: undefined;
     LoginScreen: undefined;
   };
+
+  type HomeTabsParams = {
+    RestaurantScreen: undefined;
+    OrdersTabs: undefined;
+  };
+
+  type HomewDrawerParams = {
+    RestaurantTabs: undefined;
+    ProfileScreen: undefined;
+    SettingsScreen: undefined;
+  };
 }
 
 // Auth Screen Props

@@ -9,3 +9,4 @@ export { default as ProfileScreen } from './home/Profile';
 export { default as SettingsScreen } from './home/Settings';
 export { default as RestaurantsScreen } from './home/restaurants/Restaurants';
 export { default as OrdersScreen } from './home/restaurants/Orders';
+export { default as HistoricScreen } from './home/restaurants/HistoricOrders';
