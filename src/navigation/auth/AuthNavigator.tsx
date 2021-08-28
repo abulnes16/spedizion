@@ -1,11 +1,15 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { LoginScreen, RegisterScreen } from '../../screens';
+
+const AuthStack = createStackNavigator<AuthStackParams>();
 
 const AuthNavigator = () => {
   return (
-    <View>
-      <Text>Auth Navigator</Text>
-    </View>
+    <AuthStack.Navigator>
+      <AuthStack.Screen name="LoginScreen" component={LoginScreen} />
+      <AuthStack.Screen name="RegisterScreen" component={RegisterScreen} />
+    </AuthStack.Navigator>
   );
 };
 

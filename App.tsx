@@ -1,14 +1,14 @@
 import React from 'react';
-import { Text } from 'react-native';
-import { DummyHOC } from './src/components';
+import { NavigationContainer } from '@react-navigation/native';
+import MainNavigator from './src/navigation/MainNavigator';
 import { AuthProvider } from './src/state/auth';
 
 const App = () => {
   return (
     <AuthProvider>
-      <DummyHOC iconName="home" text="Start">
-        <Text>App Screen</Text>
-      </DummyHOC>
+      <NavigationContainer>
+        <MainNavigator />
+      </NavigationContainer>
     </AuthProvider>
   );
 };
