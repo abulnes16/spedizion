@@ -14,8 +14,13 @@ const AuthProvider = ({ children }: Props) => {
     setUser('Angel');
   };
 
+  const logout = () => {
+    setIsLogin(false);
+    setUser('');
+  };
+
   return (
-    <AuthContext.Provider value={{ user, isLogin, login }}>
+    <AuthContext.Provider value={{ user, isLogin, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

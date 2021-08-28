@@ -6,6 +6,7 @@ const initialState: AuthContext = {
   isLogin: false,
   user: '',
   login: () => {},
+  logout: () => {},
 };
 
 const AuthContext = createContext<AuthContext>(initialState);

@@ -5,5 +5,6 @@ declare global {
     isLogin: boolean;
     user: string;
     login: () => void;
+    logout: () => void;
   }
 }
