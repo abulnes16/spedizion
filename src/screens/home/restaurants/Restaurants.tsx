@@ -4,7 +4,7 @@ import { DummyHOC } from '../../../components';
 
 const Restaurants = () => {
   return (
-    <DummyHOC iconName="storefront" text="Restaurants">
+    <DummyHOC iconName="fast-food" text="Restaurants">
       <Text>Here goes the restaurant list</Text>
     </DummyHOC>
   );
